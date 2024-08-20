@@ -2,32 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 215 15% 16%;
+    --foreground: 210 19% 73%;
+    --muted: 215 12% 20%;
+    --muted-foreground: 215 12% 70%;
+    --popover: 215 15% 13%;
+    --popover-foreground: 210 19% 83%;
+    --card: 215 15% 14%;
+    --card-foreground: 210 19% 78%;
+    --border: 215 5% 21%;
+    --input: 215 5% 24%;
+    --primary: 210 19% 73%;
+    --primary-foreground: 210 19% 13%;
+    --secondary: 210 9% 25%;
+    --secondary-foreground: 210 9% 85%;
+    --accent: 215 15% 31%;
+    --accent-foreground: 215 15% 91%;
+    --destructive: 6 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 210 19% 73%;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .stars {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    overflow: hidden;
+  }
+
+  .stars::before, .stars::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vw;
+    height: 200vh;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow:
+      200px 50px #fff,
+      340px 80px #fff,
+      600px 120px #fff,
+      900px 400px #fff,
+      1150px 200px #fff,
+      1400px 300px #fff;
+    animation: moveStars 100s linear infinite;
+  }
+
+  .stars::after {
+    animation-duration: 200s;
+    opacity: 0.5;
+  }
+
+  @keyframes moveStars {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
   }
 }

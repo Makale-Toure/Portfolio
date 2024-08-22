@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { ComponentPropsWithoutRef, useRef } from "react";
 import {
     motion,
     useMotionTemplate,
@@ -9,19 +9,39 @@ import {
 } from "framer-motion";
 import { FiPlus } from "react-icons/fi";
 import { Section } from "./Section";
+import { cn } from "@/lib/utils";
+import { FigmaIcon } from "./icons/FigmaIcon";
+import { UnityIcon } from "./icons/Unityicon";
+
+const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
+    return (
+        <span
+            className={cn(
+                "bg-accent/10 font-mono hover:bg-accent/25 transition-colors border-accent m-1 rounded-sm text-secondary",
+                className)}
+            {...props}
+        />
+    )
+
+}
 
 type TiltCardProps = {
     image: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
 };
 
 const Carousel: React.FC = () => {
     const projects = [
         {
-            image: "app/components/photos/AstroBob.png",
-            title: "Project 1",
-            description: "A brief description of project 1.",
+            image: "/photos/AstroBob.png",
+            title: "AstroBob",
+            description: (
+                <p className="text-sm text-gray-600 leading-loose text-justify">
+                    Il s'agit d'un jeu en réalité virtuelle développé sur <Code className="inline-flex items-center gap-1">Unity <UnityIcon size={20} className="inline" /></Code>. 
+                    Le jeu offre une expérience immersive en utilisant le casque VR.
+                </p>
+            ),
         },
         {
             image: "/path/to/your/image2.jpg",
@@ -108,7 +128,7 @@ const TiltCard: React.FC<TiltCardProps> = ({ image, title, description }) => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-gray-600 to-gray-900"
+            className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-gray-600 to-gray-900 mx-auto "
         >
             <div
                 style={{
@@ -120,7 +140,7 @@ const TiltCard: React.FC<TiltCardProps> = ({ image, title, description }) => {
                 <img
                     src={image}
                     alt={title}
-                    className="h-48 w-full object-cover rounded-t-xl"
+                    className="h-40 w-full object-cover rounded-2xl p-2"
                     style={{ transform: "translateZ(50px)" }}
                 />
                 <div className="p-4" style={{ transform: "translateZ(50px)" }}>

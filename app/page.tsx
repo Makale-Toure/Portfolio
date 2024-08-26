@@ -1,16 +1,36 @@
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { Skills } from "./components/Skills";
 import { Spacing } from "./components/Spacing";
-import Carousel from "./components/TiltCard";
+import { Status } from "./components/Status";
+
 
 export default function Home() {
   return (
     <main>
-      <Header /> 
-      <Spacing size="sm" />
+      <Header />
+
+      <Spacing size="md" />
+
       <Hero />
-      <Spacing size="sm" />
-      <Carousel/>
+
+      <Spacing size="md" />
+
+      <Status />
+
+      <Spacing size="md" />
+
+      <Skills />
+
+      <Spacing size="md" />
+
+      <Contact />
+
+      <Spacing size="md" />
+
+      <Footer />
     </main>
   );
 }

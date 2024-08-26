@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ComponentPropsWithoutRef, useRef } from "react";
+import React, { ComponentPropsWithoutRef, useRef, useCallback } from "react";
 import {
     motion,
     useMotionTemplate,
@@ -9,21 +9,7 @@ import {
 } from "framer-motion";
 import { FiPlus } from "react-icons/fi";
 import { Section } from "./Section";
-import { cn } from "@/lib/utils";
-import { FigmaIcon } from "./icons/FigmaIcon";
-import { UnityIcon } from "./icons/Unityicon";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-    return (
-        <span
-            className={cn(
-                "bg-accent/10 font-mono hover:bg-accent/25 transition-colors border-accent m-1 rounded-sm text-secondary",
-                className)}
-            {...props}
-        />
-    )
-
-}
+import { Code } from "./Code";
 
 type TiltCardProps = {
     image: string;
@@ -31,15 +17,15 @@ type TiltCardProps = {
     description: React.ReactNode;
 };
 
-const Carousel: React.FC = () => {
+const Cards: React.FC = () => {
     const projects = [
         {
             image: "/photos/AstroBob.png",
             title: "AstroBob",
             description: (
                 <p className="text-sm text-gray-600 leading-loose text-justify">
-                    Il s'agit d'un jeu en réalité virtuelle développé sur <Code className="inline-flex items-center gap-1">Unity <UnityIcon size={20} className="inline" /></Code>. 
-                    Le jeu offre une expérience immersive en utilisant le casque VR.
+                    Il s'agit d'un jeu en réalité virtuelle développé sur <Code className="inline-flex items-center gap-1">Unity </Code>.
+                    Le jeu offre une expérience immersive en utilisant le casque VR Luci.
                 </p>
             ),
         },
@@ -67,7 +53,7 @@ const Carousel: React.FC = () => {
                     Mes projets
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-12 items-center">
                     {projects.map((project, index) => (
                         <TiltCard
                             key={index}
@@ -128,7 +114,7 @@ const TiltCard: React.FC<TiltCardProps> = ({ image, title, description }) => {
                 transformStyle: "preserve-3d",
                 transform,
             }}
-            className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-gray-600 to-gray-900 mx-auto "
+            className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-gray-600 to-gray-900 "
         >
             <div
                 style={{
@@ -158,4 +144,4 @@ const TiltCard: React.FC<TiltCardProps> = ({ image, title, description }) => {
     );
 };
 
-export default Carousel;
+export default Cards;

@@ -1,21 +1,21 @@
-"use client"; // Ajoutez ceci en haut du fichier
+"use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import anime from "animejs";
 
 const WaterDropGrid: React.FC = () => {
   return (
-    <div className="relative grid place-content-center px-8 py-12">
+    <div className="relative grid justify-center">
       <DotGrid />
     </div>
   );
 };
 
-const GRID_WIDTH = 25;
-const GRID_HEIGHT = 20;
+const GRID_WIDTH = 15; {/* LINE */ }
+const GRID_HEIGHT = 2; {/* COLUMN */ }
 
 const DotGrid: React.FC = () => {
-  const handleDotClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const animateGrid = () => {
     anime({
       targets: ".dot-point",
       scale: [
@@ -32,10 +32,15 @@ const DotGrid: React.FC = () => {
       ],
       delay: anime.stagger(100, {
         grid: [GRID_WIDTH, GRID_HEIGHT],
-        from: parseInt((e.target as HTMLDivElement).dataset.index || "0"),
+        from: Math.floor(Math.random() * (GRID_WIDTH * GRID_HEIGHT)),
       }),
     });
   };
+
+  useEffect(() => {
+    const interval = setInterval(animateGrid, 3000); {/* 3 seconds */ }
+    return () => clearInterval(interval);
+  }, []);
 
   const dots = [];
   let index = 0;
@@ -47,7 +52,6 @@ const DotGrid: React.FC = () => {
           className="group cursor-crosshair rounded-full p-2 transition-colors hover:bg-slate-600"
           data-index={index}
           key={`${i}-${j}`}
-          onClick={handleDotClick} // Assurez-vous que le gestionnaire d'événements est ici
         >
           <div
             className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-slate-700 to-slate-400 opacity-50 group-hover:from-indigo-600 group-hover:to-white"

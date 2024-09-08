@@ -13,7 +13,7 @@ const AnekTelugu = Anek_Telugu({
 
 export const metadata: Metadata = {
   title: "Makalé Touré ⸱ Future Software Engineer",
-  description: "Let's see if we can innovate together😆",
+  description: "Let's see if we can innovate together 😆",
 };
 
 export default function RootLayout({

@@ -1,12 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { ArrowUpRight, BookOpenText, Bot, BotMessageSquare, Car, Contact, Gamepad, Home, LucideIcon, Package, TabletSmartphone, Trophy } from "lucide-react";
-import Link from 'next/link';
+import { BookOpenText, Bot, BotMessageSquare, Car, Contact, Gamepad, Home, LucideIcon, Package, TabletSmartphone, Trophy } from "lucide-react";
 import { GoProject } from "react-icons/go";
-import { Badge } from "@/components/ui/badge";
 import WaterDropGrid from "./WaterDropGrid";
 import { Code } from "./Code";
-import { UnityIcon } from "./icons/UnityIcon";
 import { Project, ProjectProps } from "./Project";
 import { ContactCard } from "./ContactCard";
 import { Experience, ExperienceProps } from "./Experience";
@@ -16,6 +13,7 @@ import { SpringIcon } from "./icons/SpringIcon";
 import { PythonIcon } from "./icons/PythonIcon";
 import { CPlusIcon } from "./icons/CPlusIcon";
 import { FlutterIcon } from "./icons/FlutterIcon";
+import { UnityIcon } from "./icons/UnityIcon";
 
 
 export const Status = () => {

@@ -4,7 +4,7 @@ import { Code } from "./Code"
 import { HTMLIcon } from "./icons/HTMLIcon"
 import { CSSIcon } from "./icons/CSSIcon"
 import { FigmaLogoIcon } from "@radix-ui/react-icons"
-import { Download, Plane } from "lucide-react"
+import { Eye, Plane } from "lucide-react"
 
 export const Hero = () => {
     return (
@@ -26,10 +26,9 @@ export const Hero = () => {
                     {/*We can wrap the Code in a Link*/}
                 </p>
 
-                <a href="/documents/CV.pdf" download className="text-base leading-loose text-justify font-semibold">
-                    Download my resume (french version) &nbsp;
-                    <Download className="inline animate-bounce" size={20} />
-
+                <a href="/documents/CV.pdf" target="_blank" rel="noopener noreferrer" className="text-base leading-loose text-justify font-semibold">
+                    See my resume (french version) &nbsp;
+                    <Eye className="inline" size={20} />
                 </a>
 
             </div>

@@ -12,7 +12,7 @@ const WaterDropGrid: React.FC = () => {
 };
 
 const GRID_WIDTH = 15; {/* LINE */ }
-const GRID_HEIGHT = 2; {/* COLUMN */ }
+const GRID_HEIGHT = 9; {/* COLUMN */ }
 
 const DotGrid: React.FC = () => {
   const animateGrid = () => {

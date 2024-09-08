@@ -37,11 +37,11 @@ export const Skills = () => {
                 <IntelliJIcon size={42} />
 
                 <h3 className="text-2xl font-semibold tracking-tight">
-                    React
+                    IntelliJ IDEA
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                    When it comes to web development, I really like <Code>React</Code> because of its simplicity and flexibility.
-                    I also enjoy working with <Code>Bootstrap</Code>.
+                    I use <Code>IntelliJ IDEA</Code> for Java development because
+                    this IDE has a lot of features that make development easier.
                 </p>
             </div>
 
@@ -50,11 +50,11 @@ export const Skills = () => {
                 <AndroidIcon size={42} />
 
                 <h3 className="text-2xl font-semibold tracking-tight">
-                    React
+                    Android Studio
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                    When it comes to web development, I really like <Code>React</Code> because of its simplicity and flexibility.
-                    I also enjoy working with <Code>Bootstrap</Code>.
+                    One of the best IDE i worked on for mobile development was <Code>Android Studio</Code>.
+                    I also prefer <Code>Flutter</Code> than <Code>Kotlin</Code>.
                 </p>
             </div>
         </div>
@@ -66,11 +66,11 @@ export const Skills = () => {
                 <FigmaIcon size={42} />
 
                 <h3 className="text-2xl font-semibold tracking-tight">
-                    React
+                    Figma
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                    When it comes to web development, I really like <Code>React</Code> because of its simplicity and flexibility.
-                    I also enjoy working with <Code>Bootstrap</Code>.
+                    For UI design, my favorite modeling software is <Code>Figma</Code>.
+                    It offers a lot of features and possibilities that make design easier and more interactive.
                 </p>
             </div>
 
@@ -79,26 +79,16 @@ export const Skills = () => {
                 <SpringIcon size={42} />
 
                 <h3 className="text-2xl font-semibold tracking-tight">
-                    React
+                    Spring Boot
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                    When it comes to web development, I really like <Code>React</Code> because of its simplicity and flexibility.
-                    I also enjoy working with <Code>Bootstrap</Code>.
+                    The<Code>Spring Boot</Code>framework is my go-to choice because
+                    it simplifies the development process by providing a comprehensive set of tools and libraries for
+                    <Code>Java</Code>coding.
                 </p>
             </div>
 
-            {/*Figma*/}
-            <div className="flex flex-col gap-2 flex-1">
-                <FigmaIcon size={42} />
 
-                <h3 className="text-2xl font-semibold tracking-tight">
-                    React
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                    When it comes to web development, I really like <Code>React</Code> because of its simplicity and flexibility.
-                    I also enjoy working with <Code>Bootstrap</Code>.
-                </p>
-            </div>
         </div>
     </Section>
 }

@@ -12,18 +12,18 @@ export const Header = () => {
                 <h1 className="text-lg font-bold text-primary">
                     Makale.com
                 </h1>
-                <div className="flex-1"/>
+                <div className="flex-1" />
                 <ul className="flex items-center gap-2">
-                    <Link 
-                    href="https://github.com/Makale-Toure"
-                    className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
-                        <GithubIcon size={16} className="text-foreground"/>
+                    <Link
+                        href="https://github.com/Makale-Toure"
+                        className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}>
+                        <GithubIcon size={16} className="text-foreground" />
                     </Link>
 
-                    <Link 
-                    href="https://www.linkedin.com/in/makal%C3%A9-tour%C3%A9/"
-                    className={cn(buttonVariants({variant: "outline"}), "size-6 p-0")}>
-                        <LinkedinIcon size={16} className="text-foreground"/>
+                    <Link
+                        href="https://www.linkedin.com/in/makal%C3%A9-tour%C3%A9/"
+                        className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0")}>
+                        <LinkedinIcon size={16} className="text-foreground" />
                     </Link>
                 </ul>
             </Section>

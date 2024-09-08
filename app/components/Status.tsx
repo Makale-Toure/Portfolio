@@ -10,6 +10,12 @@ import { UnityIcon } from "./icons/UnityIcon";
 import { Project, ProjectProps } from "./Project";
 import { ContactCard } from "./ContactCard";
 import { Experience, ExperienceProps } from "./Experience";
+import { IonicIcon } from "./icons/IonicIcon";
+import { ArduinoIcon } from "./icons/ArduinoIcon";
+import { SpringIcon } from "./icons/SpringIcon";
+import { PythonIcon } from "./icons/PythonIcon";
+import { CPlusIcon } from "./icons/CPlusIcon";
+import { FlutterIcon } from "./icons/FlutterIcon";
 
 
 export const Status = () => {
@@ -27,13 +33,13 @@ export const Status = () => {
                                 Logo={project.Logo}
                                 title={project.title}
                                 description={project.description}
-                                url="/"
+                                url={project.url}
                             />
                         ))}
                     </div>
                 </Card>
             </div>
-            <div className="flex-[2] w-full flex flex-col gap-4">
+            <div className="flex-[2] w-full flex flex-col gap-5">
                 <Card className="p-4 flex-1">
                     <p className="scroll-m-20 text-xl font-semibold tracking-tight w-full">
                         Experiences <Trophy className="inline w-5 h-5"></Trophy>
@@ -48,7 +54,7 @@ export const Status = () => {
                     </div>
                 </Card>
 
-                <div className="w-full p-4 flex flex-col gap-1"> {/* Revoir le w-full */}
+                <div className="w-full p-4 flex flex-col gap-2"> {/* Revoir le w-full */}
                     <WaterDropGrid></WaterDropGrid>
                 </div>
 
@@ -83,60 +89,68 @@ const PROJECTS: ProjectProps[] = [
         title: "AstroBOB",
         description: (
             <>
-                VR Game project made with <Code className="inline-flex items-center gap-1">Unity3D <UnityIcon size={16} className="inline"></UnityIcon></Code>.
+                VR Game where you have to carry out missions and discover the planet.
+                <br />Made with <Code className="inline-flex items-center gap-1">Unity3D <UnityIcon size={16} className="inline"></UnityIcon></Code>
             </>
         ),
-        url: "/",
+        url: "https://github.com/Makale-Toure/AstroBobVR.git",
     },
     {
         Logo: TabletSmartphone,
         title: "CuisinKoala",
         description: (
             <>
-                A brief description of project 2 using.
+                An app that analyzes your shopping list and suggests super dishes.
+                <br />Made with <Code className="inline-flex items-center gap-1">Ionic <IonicIcon size={16} className="inline"></IonicIcon></Code>
             </>
         ),
-        url: "/",
+        url: "https://github.com/Estebancott/CuisinKoala.git",
     },
     {
         Logo: Package,
         title: "ENSIM-Box",
         description: (
             <>
-                A brief description of project 3 with.
+                Arduino coding boxes for introduction to computer science.
+                <br />Made with <Code className="inline-flex items-center gap-1">Arduino <ArduinoIcon size={16} className="inline"></ArduinoIcon></Code>
             </>
         ),
-        url: "/",
+        url: "https://docs.google.com/document/d/1U2huaPYTanPKElzbtk1_Z-BTNnJvSVvGEfrNNCXCHSA/edit?usp=sharing",
     },
     {
         Logo: BotMessageSquare,
         title: "Telegram ChatBot",
         description: (
             <>
-                A brief description of project 4 leveraging.
+                Implement a Telegram robot to act as a personal assistant.
+                <br />Made with <Code className="inline-flex items-center gap-1">SpringBoot <SpringIcon size={16} className="inline"></SpringIcon></Code>
+                and <Code className="inline-flex items-center gap-1">Telegram API </Code>
             </>
         ),
-        url: "/",
+        url: "https://github.com/CharlesPeslerbe/MCBOT.git",
     },
     {
         Logo: Bot,
-        title: "FarmBot",
+        title: "Farming Mars",
         description: (
             <>
-                A brief description of project 4 with.
+                Design a robot to take part in the 2024 French Robotics Cup.
+                <br />Made with <Code className="inline-flex items-center gap-1">Python <PythonIcon size={16} className="inline" /></Code>
+                and<Code className="inline-flex items-center gap-1">C++<CPlusIcon size={16} className="inline" /></Code>
             </>
         ),
-        url: "/",
+        url: "https://github.com/ENSIMelec",
     },
     {
         Logo: BookOpenText,
         title: "Bookworm",
         description: (
             <>
-                A brief description of project 4 focusing on.
+                An app that allows me to list my books by scanning the barcode.
+                <br />Made with <Code className="inline-flex items-center gap-1">Flutter <FlutterIcon size={16} className="inline"></FlutterIcon></Code>
             </>
         ),
-        url: "/",
+        url: "https://github.com/Makale-Toure/Bookworm.git",
     },
 ];
 
@@ -152,7 +166,7 @@ const EXPERIENCES: ExperienceProps[] = [
         url: "https://dfacom.net/",
     },
     {
-        image: "https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-1/303439809_400805338862421_9085433213933703881_n.png?stp=dst-png_s200x200&_nc_cat=101&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=bGPsiXElInQQ7kNvgGnt00D&_nc_ht=scontent-bru2-1.xx&oh=00_AYDbJ3gY6Osz0l0It4APW4HxbPbSBaPkqTanO5DfyEC19Q&oe=66CEBEFD",
+        image: "https://pbs.twimg.com/profile_images/1179127082565193728/wgMSrvUz_400x400.jpg",
         title: "Ensim'ELEC",
         role: "Member of the robotics Club",
         date: "2023-2024",

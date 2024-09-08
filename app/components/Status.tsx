@@ -13,7 +13,7 @@ import { SpringIcon } from "./icons/SpringIcon";
 import { PythonIcon } from "./icons/PythonIcon";
 import { CPlusIcon } from "./icons/CPlusIcon";
 import { FlutterIcon } from "./icons/FlutterIcon";
-import { UnityIcon } from "./icons/UnityIcon";
+import { UnityVRIcon } from "./icons/UnityVRIcon";
 
 
 export const Status = () => {
@@ -88,7 +88,7 @@ const PROJECTS: ProjectProps[] = [
         description: (
             <>
                 VR Game where you have to carry out missions and discover the planet.
-                <br />Made with <Code className="inline-flex items-center gap-1">Unity3D <LucideGamepad size={16} className="inline"></LucideGamepad></Code>
+                <br />Made with <Code className="inline-flex items-center gap-1">Unity3D <UnityVRIcon size={16} className="inline"></UnityVRIcon></Code>
             </>
         ),
         url: "https://github.com/Makale-Toure/AstroBobVR.git",

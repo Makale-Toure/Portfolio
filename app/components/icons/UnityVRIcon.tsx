@@ -1,6 +1,6 @@
-import { ComponentProps, ComponentPropsWithRef } from "react";
+import { ComponentPropsWithRef } from "react";
 
-export const UnityIcon = (props: ComponentPropsWithRef<"svg"> & { size?: number }) => {
+export const UnityVRIcon = (props: ComponentPropsWithRef<"svg"> & { size?: number }) => {
     return (
         <svg
             width={props.size}

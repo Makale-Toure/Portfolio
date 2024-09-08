@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { BookOpenText, Bot, BotMessageSquare, Car, Contact, Gamepad, Home, LucideIcon, Package, TabletSmartphone, Trophy } from "lucide-react";
+import { BookOpenText, Bot, BotMessageSquare, Contact, Gamepad, LucideGamepad, Package, TabletSmartphone, Trophy } from "lucide-react";
 import { GoProject } from "react-icons/go";
 import WaterDropGrid from "./WaterDropGrid";
 import { Code } from "./Code";
@@ -88,7 +88,7 @@ const PROJECTS: ProjectProps[] = [
         description: (
             <>
                 VR Game where you have to carry out missions and discover the planet.
-                <br />Made with <Code className="inline-flex items-center gap-1">Unity3D <UnityIcon size={16} className="inline"></UnityIcon></Code>
+                <br />Made with <Code className="inline-flex items-center gap-1">Unity3D <LucideGamepad size={16} className="inline"></LucideGamepad></Code>
             </>
         ),
         url: "https://github.com/Makale-Toure/AstroBobVR.git",

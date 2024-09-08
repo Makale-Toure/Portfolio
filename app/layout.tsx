@@ -12,8 +12,8 @@ const AnekTelugu = Anek_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "Makalé Touré ⸱ Softare Engineer",
-  description: "Currently studying software engineering at ENSIM, Le Mans",
+  title: "Makalé Touré ⸱ Future Software Engineer",
+  description: "Let's see if we can innovate together😆",
 };
 
 export default function RootLayout({

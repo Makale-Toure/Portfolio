@@ -5,13 +5,16 @@ let assetPrefix = '';
 let basePath = '/Portfolio';
 
 if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
+    const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+    assetPrefix = `/${repo}/`;
+    basePath = `/${repo}`;
 }
 
-module.exports = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-  trailingSlash: true,
+const nextConfig = {
+    output: 'export',
+    assetPrefix: assetPrefix,
+    basePath: basePath,
+    trailingSlash: true,
 };
+
+export default nextConfig;

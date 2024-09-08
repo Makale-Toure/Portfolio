@@ -17,12 +17,12 @@ export const Hero = () => {
                     Software Engineer
                 </h3>
                 <p className="text-base leading-loose text-justify">
-                    I'm currently in my final year of an engineering school specializing in computer science at ENSIM, Le Mans.
+                    I&apos;m currently in my final year of an engineering school specializing in computer science at ENSIM, Le Mans.
                     With strong basics in <Code className="inline-flex items-center gap-1">HTML <HTMLIcon size={20}></HTMLIcon></Code> and <Code className="inline-flex items-center gap-1">CSS <CSSIcon size={20}></CSSIcon></Code>,
                     I have a passion for<Code className="inline-flex items-center gap-1">web and mobile development <CodeIcon size={20} className="inline" /></Code>.
                     I also really like <Code className="inline-flex items-center gap-1">UI/UX design <FigmaLogoIcon className="inline" /></Code> and Project Management.
                     I have various hobbies but my favourite is <Code className="inline-flex items-center gap-1">travelling <Plane size={20} className="inline" /></Code>.
-                    Dynamic and enterprising, I'm looking for an end-of-study internship to validate my diploma.
+                    Dynamic and enterprising, I&apos;m looking for an end-of-study internship to validate my diploma.
                     {/*We can wrap the Code in a Link*/}
                 </p>
 

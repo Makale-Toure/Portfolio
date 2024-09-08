@@ -26,10 +26,10 @@ export const Hero = () => {
                     {/*We can wrap the Code in a Link*/}
                 </p>
 
-                <a href="/documents/CV-MakaleToure.pdf" download className="text-base leading-loose text-justify font-semibold">
-                    Download my resume &nbsp;
+                <a href="/documents/CV.pdf" download className="text-base leading-loose text-justify font-semibold">
+                    Download my resume (french version) &nbsp;
                     <Download className="inline animate-bounce" size={20} />
-                    - french version
+
                 </a>
 
             </div>

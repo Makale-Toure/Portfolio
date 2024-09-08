@@ -12,8 +12,8 @@ const AnekTelugu = Anek_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "Makalé Touré ⸱ Softare Engineer",
-  description: "Currently studying software engineering at ENSIM, Le Mans",
+  title: "Makalé Touré ⸱ Future Software Engineer",
+  description: "Let's see if we can innovate together 😆",
 };
 
 export default function RootLayout({
@@ -25,8 +25,8 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className={cn(
         GeistSans.variable,
-        GeistMono.variable, 
-        AnekTelugu.variable, 
+        GeistMono.variable,
+        AnekTelugu.variable,
         "font-sans h-full bg-background text-foreground")}>{children}</body>
     </html>
   );

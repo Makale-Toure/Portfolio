@@ -27,7 +27,7 @@ export const Hero = () => {
                 </p>
 
                 <a href="/documents/CV.pdf" target="_blank" rel="noopener noreferrer" className="text-base leading-loose text-justify font-semibold">
-                    See my resume (french version) &nbsp;
+                    Resume view (french version) &nbsp;
                     <Eye className="inline" size={20} />
                 </a>
 

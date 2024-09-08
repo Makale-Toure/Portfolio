@@ -8,8 +8,6 @@ import { Status } from "./components/Status";
 
 
 export default function Home() {
-  const res = await fetch('https://MakaleToure.com/...')
-  const data = await res.json()
   return (
     <main>
       <Header />

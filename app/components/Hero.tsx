@@ -26,9 +26,13 @@ export const Hero = () => {
                     {/*We can wrap the Code in a Link*/}
                 </p>
 
-                <a href="/documents/CV.pdf" target="_blank" rel="noopener noreferrer" className="text-base leading-loose text-justify font-semibold">
+                {/*<a href="/documents/CV.pdf" target="_blank" rel="noopener noreferrer" className="text-base leading-loose text-justify font-semibold">
                     Resume view (french version) &nbsp;
                     <Eye className="inline" size={20} />
+                </a>*/}
+
+                <a className="text-base leading-loose text-justify font-semibold">
+                    &nbsp;
                 </a>
 
             </div>
